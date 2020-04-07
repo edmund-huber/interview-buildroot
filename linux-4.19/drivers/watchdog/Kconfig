@@ -241,6 +241,13 @@ config RAVE_SP_WATCHDOG
 	help
 	  Support for the watchdog on RAVE SP device.
 
+config Y33T_WATCHDOG
+	tristate "Y33T Watchdog"
+	depends on I2C
+	select WATCHDOG_CORE
+	help
+	  Driver for the Y33T watchdog.
+
 # ALPHA Architecture
 
 # ARM Architecture

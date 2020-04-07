@@ -173,6 +173,11 @@
 			compatible = "dallas,ds1338";
 			reg = <0x68>;
 		};
+
+		wdt@40 {
+			compatible = "omega,y33t_wdt";
+			reg = <0x40>;
+		};
 	};
 
 	net@10010000 {
