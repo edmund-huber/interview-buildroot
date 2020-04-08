@@ -2372,4 +2372,8 @@ menu "Text editors and viewers"
 	source "package/vim/Config.in"
 endmenu
 
+menu "Misc"
+	source "package/watchdog_petter/Config.in"
+endmenu
+
 endmenu

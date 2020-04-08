@@ -1,0 +1,5 @@
+config BR2_PACKAGE_WATCHDOG_PETTER
+bool "watchdog_petter"
+default y
+help
+        Pets the watchdog

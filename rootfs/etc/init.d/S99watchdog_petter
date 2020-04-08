@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DAEMON="feed_watchdog"
+DAEMON="watchdog_petter"
 PIDFILE="/var/run/$DAEMON.pid"
 
 KLOGD_ARGS=""
@@ -11,7 +11,7 @@ KLOGD_ARGS=""
 start() {
 	printf 'Starting %s: ' "$DAEMON"
 	# shellcheck disable=SC2086 # we need the word splitting
-	start-stop-daemon -b -m -S -q -p "$PIDFILE" -x "/sbin/$DAEMON" \
+	start-stop-daemon -b -m -S -q -p "$PIDFILE" -x "/bin/$DAEMON" \
 		-- -n $KLOGD_ARGS
 	status=$?
 	if [ "$status" -eq 0 ]; then
